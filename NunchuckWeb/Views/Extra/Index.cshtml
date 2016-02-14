@@ -1,0 +1,87 @@
+﻿<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script type="text/javascript" src="~/Scripts/extra-index.js"></script>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">AJAX</h3>
+        </div>
+        <div class="panel-body">
+            <!-- ************************ <div id="instructors" /> ****************************-->
+            @Ajax.ActionLink("All", "All", new AjaxOptions()
+            {
+                HttpMethod = "GET",
+                UpdateTargetId = "instructors",
+                InsertionMode = InsertionMode.Replace
+            })
+
+            &nbsp;
+
+            @Ajax.ActionLink("Top", "Top", new AjaxOptions()
+            {
+                HttpMethod = "GET",
+                UpdateTargetId = "instructors",
+                InsertionMode = InsertionMode.Replace
+            })
+
+            &nbsp;
+
+            @Ajax.ActionLink("Bot", "Bottom", new AjaxOptions()
+            {
+                HttpMethod = "GET",
+                UpdateTargetId = "instructors",
+                InsertionMode = InsertionMode.Replace
+            })
+
+            <!-- ************************ <div id="ask" /> ****************************-->
+
+            <hr />
+
+            @Ajax.BeginForm("Ask", new AjaxOptions()
+            {
+                LoadingElementId = "loader",
+                UpdateTargetId = "instructorList",
+                InsertionMode = InsertionMode.Replace
+            })
+            @{
+                string patient_Name = "";
+                @Html.EditorFor(x => patient_Name) //text box with name and id, that it will pass to controller
+                <input type="submit" value="Search" />
+            }
+
+            <div id="instructors"></div>
+            <div id="ask"></div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">JQuery</h3>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="fun">&nbsp;</div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="fun">&nbsp;</div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="fun">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

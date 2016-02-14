@@ -1,0 +1,30 @@
+﻿@using NunchuckWeb.Models;
+@{
+    ViewBag.Title = "About Our Instructors";
+}
+
+<br />
+<div class="jumbotron jumbotron-transparent">
+    <h2>@ViewBag.Title</h2>
+    <p>All martial arts instructors in Lafayette, LA are trained to ensure that our martial arts classes are safe, effective and fun.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="panel panel-default panel-transparent-semi">
+            <div class="panel-heading">
+                <h3 class="panel-title">Click for more information about our world-class instructors</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    @foreach (Instructors i in ViewBag.instructors)
+                    {
+                        <h4 class="list-group-item-heading">
+                            <a href="../Instructors/Instructor/@i.Id" class="list-group-item">@i.Name</a>
+                        </h4>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

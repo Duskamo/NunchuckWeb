@@ -1,0 +1,40 @@
+﻿@using NunchuckWeb.Models;
+@{
+    ViewBag.Title = "Instructor";
+}
+
+<br />
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">Instructor</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <td>Name:</td>
+                    <td>@ViewBag.instructor.Name</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@ViewBag.instructor.Email</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>@ViewBag.instructor.Address</td>
+                </tr>
+                <tr>
+                    <td>Level:</td>
+                    <td>@ViewBag.instructor.Level</td>
+                </tr>
+                <tr>
+                    <td>Facebook:</td>
+                    <td>@ViewBag.instructor.Facebook</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

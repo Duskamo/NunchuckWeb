@@ -1,0 +1,70 @@
+﻿body {
+}
+
+/* ******************* panels ***************** */
+.panel-transparent {
+    background:rgba(255,255,255,0);
+}
+
+.panel-transparent-semi {
+    background:rgba(255,255,255,0.5);
+}
+
+/* ******************* jumbotron ***************** */
+.jumbotron-inverted {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #111111;
+}
+
+.jumbotron-inverted h2 {
+  line-height: 1;
+  color: #ffffff;
+}
+
+.jumbotron-inverted p {
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.jumbotron-transparent {
+    background:rgba(238,238,238,0.8);
+}
+
+/* ******************* container ***************** */
+.container-transparent {
+    background:rgba(255,255,255,0.4);
+}
+
+/* ******************* JQuery fun ***************** */
+.fun {
+    background-color: red;
+    border-radius:4px;
+    height:70px;
+}
+
+.fun2 {
+    background-color: lightgrey;
+    height:600px;  
+    border-radius: 4px;
+}
+
+.yo {
+    position:relative;
+    top:50%;
+    text-align:center; 
+}
+
+/* ******************* Slide main page ***************** */
+
+.slide {
+    display: none;
+}
+
+.active-slide {
+    display: block;
+}

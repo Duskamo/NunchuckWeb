@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Contacts</h2>
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contact Me</h3>
+                </div>
+                <div class="panel-body">
+                    <p>If you would like to contact me in regards to the Lissijous Weapons System, please see the information below.</p>
+
+                    <hr />
+
+                    <dl class="dl-horizontal">
+                        <dt>Name</dt>
+                        <dd>@ViewBag.instructor.Name</dd>
+                        <dt>Email</dt>
+                        <dd>@ViewBag.instructor.Email</dd>
+                        <dt>Facebook</dt>
+                        <dd>@ViewBag.instructor.Facebook</dd>
+                        <dt>Phone</dt>
+                        <dd>@ViewBag.instructor.Phone</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+@Html.ActionLink("Extras", "Index", "Extra")
+
